@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                         ClipData clip = ClipData.newPlainText("Scan Result", result);
                         clipboard.setPrimaryClip(clip);
+
                         Toast.makeText(MainActivity.this, "Result copied to clipboard", Toast.LENGTH_SHORT).show();
 
                     }
@@ -82,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+
+        Toast.makeText(MainActivity.this, result.toString(), Toast.LENGTH_SHORT).show();
+
     }
 
 }
